@@ -9,9 +9,9 @@ Setting up with following softwares:
 - Bioc: 3.17
 
 ```sh
-sudo export PYTHON_VERSION=3.11.3
-sudo export MINIFORGE_RELEASE=23.1.0
-sudo export R_VERSION=4.3.0
+export PYTHON_VERSION=3.11.3
+export MINIFORGE_RELEASE=23.1.0
+export R_VERSION=4.3.0
 ```
 
 A docker image can be used: `docker run -it ubuntu:22.04` to kickstart the 
@@ -49,8 +49,8 @@ apt install -y \
 ### Install python from source (custom location)
 
 ```sh
-sudo export PYTHON_MAIN=$(echo $PYTHON_VERSION | sed 's,.[0-9]$,,')
-sudo export PYTHON_BASE=$(echo $PYTHON_VERSION | sed 's,.[0-9].[0-9]$,,')
+export PYTHON_MAIN=$(echo $PYTHON_VERSION | sed 's,.[0-9]$,,')
+export PYTHON_BASE=$(echo $PYTHON_VERSION | sed 's,.[0-9].[0-9]$,,')
 
 cd ~
 wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
